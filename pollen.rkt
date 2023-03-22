@@ -39,9 +39,14 @@
 
 ;  (case (current-poly-target)
 
+(define (bf_text . elements)
+  (case (current-poly-target)
+    [(tex) (apply string-append `("\\textbf{" ,@elements "}"))]
+    [else (txexpr 'b empty elements)]))
+
 (define (main_title . elements)
   (case (current-poly-target)
-    [(tex) (apply string-append `("\\bfseries{\\huge{" ,@elements "}}"))]
+    [(tex) (apply string-append `("\\huge{" ,@elements "}"))]
     [else (txexpr 'h1 empty elements)]))
  
 (define (second_title . elements)
@@ -54,3 +59,23 @@
     [(tex) (string-append "\\title{" title1 "\\\\[0.50cm]" title2 "}")]
     [else (txexpr 'h1 empty title1)]))
  
+(define (main_name . elements)
+  (case (current-poly-target)
+    [(tex) (apply string-append `("\\Large{" ,@elements "}"))]
+    [else (txexpr 'h1 empty elements)]))
+
+(define (link href . elements)
+  (case (current-poly-target)
+    [(tex) (apply string-append `("\\href{" ,href "}" "{" ,@elements "}"))]
+    [else `(a ((href ,href)) ,@elements)]))
+
+(define (mail_link link_ref)
+    (string-append "mailto:" link_ref))
+
+(define (tel_link link_ref)
+    (string-append "tel:" link_ref))
+
+(define (image src . elements)
+  (case (current-poly-target)
+    [(tex) (apply string-append `("\\includegraphics[" ,@elements "]" "{" ,src "}"))]
+    [else `(img ,src ,@elements)]))

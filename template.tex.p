@@ -20,7 +20,7 @@
 \usepackage{parskip}
 \usepackage{array, xcolor, graphicx}
 \usepackage[a4paper, margin=1cm]{geometry}
-◊(combined_title ◊(main_title ◊|title|) ◊(second_title ◊|subtitle|))
+◊(combined_title ◊(bf_text (main_title ◊|title|)) ◊(second_title ◊|subtitle|))
 % no author
 \author{\bfseries\Huge \vspace{-4ex}}
 % no date
@@ -39,18 +39,18 @@
 \begin{document}
 
 \begin{minipage}[t]{0.80\textwidth}
-\textbf{\Large{◊|first_name| ◊|last_name|}}\\
+◊(bf_text (main_name ◊|first_name| " " ◊|last_name|))\\
 \vspace{4ex}27 ans\\
 92 bis rue Rouget de Lisle, Bezons, France\\
-\href{tel:0630829000}{06 30 82 90 00}\\
-\href{mailto:mlegheraba@protonmail.com}{mlegheraba@protonmail.com}\\
-\href{https://github.com/MohamedLEGH}{github.com/MohamedLEGH}\\
+◊link[◊(tel_link ◊|number|)]{06 30 82 90 00}\\
+◊link[◊(mail_link ◊|email|)]{mlegheraba@protonmail.com}\\
+◊link[◊|github_link|]{github.com/MohamedLEGH}\\
 \vspace{5ex}{\bf Français}: langue maternelle \\
 {\bf Anglais}: bon niveau (TOIEC: 935) \\
 \end{minipage}
 \begin{minipage}[t]{0.20\textwidth}
 \vspace{-3ex}
-\includegraphics[width=4cm]{figures/Legheraba-Mohamed.jpg}
+◊image["figures/Legheraba-Mohamed.jpg"]{width=4cm}
 \end{minipage}
 % to make maketitle work without begin of page
 {\let\newpage\relax\maketitle}
