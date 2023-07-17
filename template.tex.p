@@ -40,7 +40,7 @@
 
 \begin{minipage}[t]{0.80\textwidth}
 ◊(bf_text (main_name ◊|first_name| " " ◊|last_name|))\\
-\vspace{4ex}27 ans\\
+\vspace{4ex}◊|age| ans\\
 92 bis rue Rouget de Lisle, Bezons, France\\
 ◊link[◊(tel_link ◊|number|)]{06 30 82 90 00}\\
 ◊link[◊(mail_link ◊|email|)]{mlegheraba@protonmail.com}\\
@@ -64,10 +64,10 @@
 \vspace{2ex}
 
 \begin{tabular}{L!{\VRule}R}
+\textbf{\textit{Depuis Février 2023}} \hspace{1.5ex} & \textbf{Doctorat, Sorbonne Université, LIP6}, sujet de thèse \textit{Cybersecure Federated Learning}\\[0.75cm]
 \textbf{\textit{2015--2018}} \hspace{1.5ex} \includegraphics[width=1.4cm]{figures/Logo_Reseau_Polytech.png} & \textbf{Diplôme d'Ingénieur, Polytech Sorbonne}, spécialité \textit{Mathématiques Appliquées et Informatique Numérique}: Statistiques, Équations différentielles, Programmation, Structures de données, Parallélisme.\\[0.75cm]
 \textbf{\textit{2017 (Hiver)}} \hspace{.5ex} \includegraphics[width=.85cm]{figures/TU.png} & \textbf{Semestre Erasmus à TU Delft}, Pays-Bas: Théorie des graphes, Cryptographie, Blockchain, Cloud Computing, Visualisation de données.\\[0.75cm]
 \textbf{\textit{2013--2015}} \hspace{3ex} \includegraphics[width=.85cm]{figures/PEIP_logo.png} & \textbf{Polytech Sorbonne}, \textit{PeiP} (Parcours des écoles d'ingénieurs Polytech): Maths, Informatique, Physique, Chimie, Mécanique.\\[0.75cm]
-\textbf{\textit{2013}} & \textbf{Baccalauréat S}, mention Bien. Lycée Chaptal.\\
 \end{tabular}
 
 \vspace{2ex}
@@ -77,25 +77,26 @@
 \vspace{2ex}
 
 \begin{longtable}{L!{\VRule}R}
-\textbf{\textit{Depuis Juin 2021}}& \includegraphics[width=1.5cm]{figures/Deloitte.png} \hspace{0.2cm} {\bf Ingénieur Sénior Blockchain \& DevOps, Deloitte.} \\[0.25cm]
+\textbf{\textit{Depuis Février 2023}}& \includegraphics[width=1cm]{figures/LogoLIP6.png} \hspace{0.2cm} {\bf Doctorant en Informatique} \\[0.25cm]
+& \tabitem \small{\textbf{Cours en tant que vacataire à Polytech Sorbonne} (Cours de Réseau pour les EI2I3, Cours de Méthodes Numériques pour les AGRAL3)}
+
+\\[0.20cm]
+& \tabitem \small{\textbf{Recherche scientifique} (État de l'art sur l'apprentissage fédéré, rédaction d'un survey en cours)}
+
+\\[0.20cm]
+
+\textbf{\textit{Juin 2021 - Janvier 2023}}& \includegraphics[width=1.5cm]{figures/Deloitte.png} \hspace{0.2cm} {\bf Ingénieur Sénior Blockchain \& DevOps, Deloitte.} \\[0.25cm]
 
 & \tabitem \small{\textbf{Missions d'appui aux équipes d'audit financier} (Audit des transactions sur la blockchain, revue du contrôle interne et des procédures de conservation)}
 
 \\[0.20cm]
-& \tabitem \small{\textbf{Missions d'audit technique} (Audit de smart contracts et d'application blockchain, revue de l'architecture)}
-
-\\[0.20cm]
-& \tabitem \small{\textbf{Missions de conseil} (Appui aux équipes blockchain des clients sur la gestion de projet blockchain et la réalisation technique des applications)}
+& \tabitem \small{\textbf{Missions d'audit technique et de conseil} (Audit de smart contracts et d'application blockchain, revue de l'architecture, coordination avec les équipes à l'international)}
 
 \\[0.20cm]
 & \tabitem \small{\textbf{Missions de formations} (Formations auprès des clients - banque et industrie - sur la blockchain, les crypto-actifs, les NFT et le métavers)}
 
 \\[0.20cm]
 & \tabitem \small{\textbf{Rédaction d'articles} (\href{https://www2.deloitte.com/fr/fr/pages/audit/articles/univers-metavers.html}{Article sur les NFT et le métavers}, \href{https://www2.deloitte.com/content/dam/Deloitte/fr/Documents/financial-services/Publications/future-of-money-banking.pdf}{étude sur la DeFi et les CBDC}, baromètre sur l'impact carbone de la blockchain)}
-
-
-\\[0.20cm]
-& \tabitem \small{\textbf{Coordination} (Coordination en France avec les équipes conseil et juridique, \& avec les équipes à l'international)}
 
 \\[0.20cm]
 & \tabitem \small{\textbf{Projet Fondation Deloitte} (Mise en place d'un \href{https://blog.deloitte.fr/acculturation-tech-blockchain-une-priorite-pour-les-nouvelles-generations/}{atelier} de découverte du sujet de la blockchain et des NFT pour une classe de collégiens de Sarcelles, en partenariat avec la Fondation Deloitte et avec NomadicLabs)}
@@ -121,14 +122,7 @@
 & \tabitem \small{\textbf{Rédaction d'articles} (\href{https://www.sia-partners.com/fr/actualites-et-publications/de-nos-experts/la-blockchain-catalyseur-de-la-decentralisation-et-de-la}{\textit{Blockchain \& 5G}}, \href{https://www.sia-partners.com/fr/actualites-et-publications/de-nos-experts/entretien-avec-pierre-noizat-bitcoin-et-cryptomonnaies-0}{\textit{Interview de Pierre Noizat}}, ...)}
 
 \\[0.20cm]
-& \tabitem \small{\textbf{Enseignement \textit{Programmer une blockchain}} (\href{https://github.com/MohamedLEGH/tutoriel-blockchain-creation-bootstrap}{Polytech Sorbonne}, \href{https://github.com/MohamedLEGH/tutoriel-blockchain-MinesBootstrap}{Mines St Etienne}, ...)}
-
-\\[0.20cm]
-\textbf{\textit{Mars--Septembre 2018}}& \includegraphics[width=1.5cm]{figures/ofi-am.png} \hspace{0.2cm} {\bf Stagiaire veille R\&D, Département Développement, OFI AM}.\\
-
-\\[0.20cm]
-\textbf{\textit{2017}}& {\bf Développement pour plusieurs ICO, dont 2 qui ont levé plus de 5M\$}.\\
-
+& \tabitem \small{\textbf{Enseignement \textit{Programmer une blockchain}} (\href{https://github.com/MohamedLEGH/tutoriel-blockchain-creation-bootstrap}{Polytech Sorbonne}, \href{https://github.com/MohamedLEGH/tutoriel-blockchain-MinesBootstrap}{Mines St Etienne}, ...)}\\
 \end{longtable}
 
 \vspace{2ex}
@@ -165,9 +159,7 @@
 \vspace{2ex}
 
 \begin{tabular}{L!{\VRule}R}
-\textbf{\textit{Depuis 2018}} & Association \textbf{Le Trait D’Union}, Aide aux devoirs auprès de lycéens et de collégiens. Rédaction de dossiers de subventions, trésorier. \\[0.75cm]
-
-\textbf{\textit{2014--2017}} & Association étudiante \textbf{Averroès}, Dons alimentaire pour les étudiants, trésorier puis président. \\
+\textbf{\textit{Depuis 2018}} & Association \textbf{Le Trait D’Union}, Aide aux devoirs auprès de lycéens et de collégiens. Rédaction de dossiers de subventions, trésorier. \\
 \end{tabular}
 
 \section*{Loisirs}

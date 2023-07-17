@@ -14,7 +14,7 @@
 
 (define number "0630829000")
 
-(define age "27")
+(define age "28")
 
 (define address "92 bis rue Rouget de Lisle")
 
@@ -26,7 +26,7 @@
 
 (define title "Doctorant en informatique")
 
-(define subtitle "Sujets de recherche: apprentissage fédéré, blockchain, intelligence artificielle, réseaux pair à pair")
+(define subtitle "Sujets de recherche: apprentissage fédéré, intelligence artificielle, réseaux pair à pair")
 
 ;(define (info) ;; need to append all of this
 ;	(get-age)
