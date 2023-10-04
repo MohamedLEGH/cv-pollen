@@ -13,6 +13,7 @@
 (define email "mlegheraba@protonmail.com")
 
 (define number "0630829000")
+(define spaced_number "06 30 82 90 00")
 
 (define age "28")
 
@@ -22,9 +23,11 @@
 
 (define country "France")
 
+(define full_address (string-append address ", " city ", " country))
+
 (define github_link "https://github.com/MohamedLEGH")
 
-(define title "Doctorant en informatique")
+(define title "Doctorant en Informatique")
 
 (define subtitle "Sujets de recherche: apprentissage fédéré, intelligence artificielle, réseaux pair à pair")
 

@@ -41,9 +41,9 @@
 \begin{minipage}[t]{0.80\textwidth}
 ◊(bf_text (main_name ◊|first_name| " " ◊|last_name|))\\
 \vspace{4ex}◊|age| ans\\
-92 bis rue Rouget de Lisle, Bezons, France\\
-◊link[◊(tel_link ◊|number|)]{06 30 82 90 00}\\
-◊link[◊(mail_link ◊|email|)]{mlegheraba@protonmail.com}\\
+◊|full_address|\\
+◊link[◊(tel_link ◊|number|)]{◊|spaced_number|}\\
+◊link[◊(mail_link ◊|email|)]{◊|email|}\\
 ◊link[◊|github_link|]{github.com/MohamedLEGH}\\
 \vspace{5ex}{\bf Français}: langue maternelle \\
 {\bf Anglais}: bon niveau (TOIEC: 935) \\
@@ -77,11 +77,11 @@
 \vspace{2ex}
 
 \begin{longtable}{L!{\VRule}R}
-\textbf{\textit{Depuis Février 2023}}& \includegraphics[width=1cm]{figures/LogoLIP6.png} \hspace{0.2cm} {\bf Doctorant en Informatique} \\[0.25cm]
-& \tabitem \small{\textbf{Cours en tant que vacataire à Polytech Sorbonne} (Cours de Réseau pour les EI2I3, Cours de Méthodes Numériques pour les AGRAL3)}
+\textbf{\textit{Depuis Février 2023}}& \includegraphics[width=1cm]{figures/LogoLIP6.png} \hspace{0.2cm} {\bf ◊|title|} \\[0.25cm]
+& \tabitem \small{\textbf{Enseignement à Polytech Sorbonne} Enseignement à Polytech Sorbonne (Cours de Réseau pour les EI2I3 et EISE4, Cours de Méthodes Numériques pour les AGRAL3, Cours de Bases de données pour les EI2I4, Projet industriel avec les MAIN4)}
 
 \\[0.20cm]
-& \tabitem \small{\textbf{Recherche scientifique} (État de l'art sur l'apprentissage fédéré, rédaction d'un survey en cours)}
+& \tabitem \small{\textbf{Recherche scientifique} (État de l'art sur l'apprentissage fédéré, rédaction d'un article en cours)}
 
 \\[0.20cm]
 

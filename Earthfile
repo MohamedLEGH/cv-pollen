@@ -1,40 +1,35 @@
 VERSION 0.7
 FROM texlive/texlive:latest
 WORKDIR /cv_build
-ARG --global file='mohamedlegherabaFR'
+ARG --global file='mohamedlegheraba'
+ARG --global lang='FR'
 
 build:
 	BUILD +build-classic
-	BUILD +build-onepage	
 
 build-classic:
 	BUILD +build-fr-classic
 	BUILD +build-en-classic
 
-build-onepage:
-	BUILD +build-fr-onepage
-	BUILD +build-en-onepage
-
 build-fr-classic:
-	COPY +build-pollen-tex/mohamedlegherabaFR.tex .
-	DO +BUILD_PDF --file='mohamedlegherabaFR'
+	COPY +build-pollen-tex-fr/mohamedlegheraba.tex .
+	DO +BUILD_PDF --file='mohamedlegheraba' --lang='FR'
 
 build-en-classic:
-	DO +BUILD_PDF --file='mohamedlegherabaEN'
+	COPY +build-pollen-tex-en/mohamedlegheraba.tex .
+	DO +BUILD_PDF --file='mohamedlegheraba' --lang='EN'
 
-build-fr-onepage:
-	DO +BUILD_PDF --file='mohamedlegherabaFRonepage'
+# build-pollen-html:
+# 	FROM +pollen
+# 	DO +BUILD_POLLEN --file='mohamedlegheraba' --lang='FR' --output_type='html'
 
-build-en-onepage:
-	DO +BUILD_PDF --file='mohamedlegherabaENonepage'
-
-build-pollen-html:
+build-pollen-tex-fr:
 	FROM +pollen
-	DO +BUILD_POLLEN --file='mohamedlegherabaFR' --output_type='html'
+	DO +BUILD_POLLEN --file='mohamedlegheraba' --lang='FR' --output_type='tex'
 
-build-pollen-tex:
+build-pollen-tex-en:
 	FROM +pollen
-	DO +BUILD_POLLEN --file='mohamedlegherabaFR' --output_type='tex'
+	DO +BUILD_POLLEN --file='mohamedlegheraba' --lang='EN' --output_type='tex'
 
 pollen:
 	FROM racket/racket:8.8-full
@@ -43,14 +38,14 @@ pollen:
 BUILD_POLLEN:
 	COMMAND
 	ARG output_type='html'
-	COPY pollen.rkt .
-	COPY template.${output_type}.p .
-	COPY ${file}.poly.pm .
+	COPY ${lang}/pollen.rkt .
+	COPY ${lang}/template.${output_type}.p .
+	COPY ${lang}/${file}.poly.pm .
 	RUN raco pollen render ${file}.${output_type}
-	SAVE ARTIFACT --keep-ts ${file}.${output_type} AS LOCAL build/${file}.${output_type}
+	SAVE ARTIFACT --keep-ts ${file}.${output_type} AS LOCAL build/${lang}/${file}.${output_type}
 
 BUILD_PDF:
 	COMMAND
 	COPY figures figures
 	RUN pdflatex ${file}.tex 
-	SAVE ARTIFACT --keep-ts ${file}.pdf AS LOCAL build/${file}.pdf
+	SAVE ARTIFACT --keep-ts ${file}.pdf AS LOCAL build/${lang}/${file}.pdf
