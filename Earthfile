@@ -1,5 +1,5 @@
 VERSION 0.7
-FROM texlive/texlive:latest
+FROM texlive/texlive
 WORKDIR /cv_build
 ARG --global file='mohamedlegheraba'
 ARG --global lang='FR'
